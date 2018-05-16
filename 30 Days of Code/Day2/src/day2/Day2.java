@@ -23,15 +23,15 @@ public class Day2 {
         int tip_percent = in.nextInt();
         int tax_percent = in.nextInt();
 
-        double tip = meal_cost * tip_percent / 100;
-        double tax = meal_cost * tax_percent / 100;
+        in.close();
+
+        double tip = (meal_cost * ((double) tip_percent / 100));
+        double tax = (meal_cost * ((double) tax_percent / 100));
 
         Double totalCost = new Double(meal_cost + tip + tax);
-        int roundTotalCost = totalCost.intValue();
+        int roundTotalCost = (int) Math.round(totalCost);
 
         System.out.println("The total meal cost is " + roundTotalCost + " dollars.");
-
-        in.close();
 
     }
 
